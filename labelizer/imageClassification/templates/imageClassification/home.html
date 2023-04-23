@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labélisation d'images</title>
+</head>
+
+<body>
+    <h1>Labélisation d'images</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="hidden" name="image_id" value="{{ image.id }}">
+        <br><br>
+
+        <img src="{{ image.image.url }}" alt="Image à classer" width="300">
+
+        <h2>Classes</h2>
+        {% for classe in classes %}
+        <div>
+            <label>
+                <input type="radio" name="classe" value="{{ classe.id }}" required>
+                {{ classe.nom }}<br>
+                {% if classe.image_representative %}
+                <img src="{{ classe.image_representative.url }}" alt="{{ classe.nom }}" width="100">
+                {% endif %}
+            </label>
+        </div>
+        {% endfor %}
+
+        <br>
+        <button type="submit">Valider</button>
+    </form>
+
+</body>
+
+</html>
