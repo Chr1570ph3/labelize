@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from imageClassification.models import Classe, Image
-from imageClassification.forms import ImageForm
 import os
 import shutil
 
@@ -18,12 +17,10 @@ def home(request):
 
         return redirect('home')
 
-    form = ImageForm()
     classes = Classe.objects.all()
     image = Image.objects.filter(classe__isnull=True).first()
-    
+
     context = {
-        'form': form,
         'classes': classes,
         'image': image,
     }

@@ -1,0 +1,52 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+}
+
+.img_h1{
+    display: flex;
+    justify-content: center;
+}
+
+.img_a_classer{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+button {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+}
+
+.classes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.classes img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover
+}
+
+.classes img:hover{
+    transform: scale(3);
+}
