@@ -71,6 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'labelizer.wsgi.application'
 
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 4000
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

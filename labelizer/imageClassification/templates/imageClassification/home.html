@@ -7,6 +7,7 @@
 
     <div class="img_h1">
         <img class="img_a_classer" src="{{ image.image.url }}" alt="Image à classer" width="300">
+        <div id="hover-image-container"></div> <!-- Ajoutez ce conteneur -->
     </div>  
     <form method="post">
       {% csrf_token %}
@@ -15,7 +16,7 @@
       {% for classe in classes %}
         <div>
           <button type="submit" name="classe" value="{{ classe.id }}">
-            <img src="{{ classe.image_representative.url }}" alt="{{ classe.nom }}" width="100">
+            <img class="class-image" src="{{ classe.image_representative.url }}" alt="{{ classe.nom }}" width="100">
           </button>
         </div>
       {% endfor %}

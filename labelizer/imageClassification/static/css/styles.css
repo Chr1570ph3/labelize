@@ -48,5 +48,20 @@ button {
 }
 
 .classes img:hover{
-    transform: scale(3);
+    transform: scale(2);
+}
+
+.img_h1 div img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#hover-image-container {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 1rem;
+    width: 200px;
+    height: 200px;
 }

@@ -8,3 +8,7 @@ class Classe(models.Model):
 class Image(models.Model):
     image = models.ImageField(upload_to='raw/')
     classe = models.ForeignKey(Classe, on_delete=models.SET_NULL, null=True)
+    is_processed = models.BooleanField(default=False)  # Ajoutez ce champ
+
+    def __str__(self):
+        return self.image.name
