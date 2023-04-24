@@ -28,5 +28,19 @@
             );
         });
     </script>
+
+<script>
+    function toggleBlur() {
+        var checkbox = document.getElementById("blur");
+        var images = document.getElementsByClassName("image");
+        for (var i = 0; i < images.length; i++) {
+            if (checkbox.checked) {
+                images[i].classList.add("blur"); // ajouter la classe de flou
+            } else {
+                images[i].classList.remove("blur"); // supprimer la classe de flou
+            }
+        }
+    }
+</script>
 </body>
 </html>

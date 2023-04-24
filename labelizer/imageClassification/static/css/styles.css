@@ -27,6 +27,9 @@ h1 {
     object-fit: cover;
 }
 
+.blur{
+    filter: blur(10px); /*ajoute un flou de 5 pixels*/
+}
 
 
 button {
