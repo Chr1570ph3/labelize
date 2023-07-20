@@ -1,0 +1,2 @@
+Commande de chargement des images :
+python manage.py load_images C:/Users/chris/Projets/Labelizer/labelizer/labelizer/media/raw
